@@ -1,0 +1,105 @@
+Neural Network Tools for STM32AI v1.6.0 (STM.ai v7.1.0-RC3)
+Created date          : 2022-07-13 12:49:58
+Parameters            : generate --name network -m C:/Archivio/Lavoro/MBDA/Hums/tinyml-example-anomaly-detection-master/autoencoder/models/my_model.tflite --type tflite --compression 1 --verbosity 1 --workspace C:\Users\fede-\AppData\Local\Temp\mxAI_workspace10318922753475004707643061455410034 --output C:\Users\fede-\.stm32cubemx\network_output
+
+Exec/report summary (generate)
+------------------------------------------------------------------------------------------------------------------------
+model file            : C:\Archivio\Lavoro\MBDA\Hums\tinyml-example-anomaly-detection-master\autoencoder\models\my_model.tflite
+type                  : tflite
+c_name                : network
+compression           : None
+workspace dir         : C:\Users\fede-\AppData\Local\Temp\mxAI_workspace10318922753475004707643061455410034
+output dir            : C:\Users\fede-\.stm32cubemx\network_output
+model_name            : my_model
+model_hash            : 1544f788ad6974481edcd898cfc9c648
+input 1/1             : 'serving_default_input_60'
+                        3 items, 12 B, ai_float, float, (1,1,1,3), domain:user/
+output 1/1            : 'nl_1_nl'
+                        3 items, 12 B, ai_float, float, (1,1,1,3), domain:user/
+params #              : 17 items (68 B)
+macc                  : 22
+weights (ro)          : 68 B (68 B) (1 segment)
+activations (rw)      : 20 B (20 B) (1 segment)
+ram (total)           : 44 B (44 B) = 20 + 12 + 12
+
+Model name - my_model ['serving_default_input_60'] ['nl_1_nl']
+------------------------------------------------------------------------------------------------------------------------------------
+id   layer (type)                       oshape      param/size   macc   connected to               |   c_size   c_macc   c_type    
+------------------------------------------------------------------------------------------------------------------------------------
+0    serving_default_input_60 (Input)   (1,1,1,3)                                                  |                    
+     dense_0 (Dense)                    (1,1,1,2)   8/32         8      serving_default_input_60   |                     dense()[0]
+     nl_0_nl (Nonlinearity)             (1,1,1,2)                2      dense_0                    |                     nl()[1]   
+------------------------------------------------------------------------------------------------------------------------------------
+1    dense_1 (Dense)                    (1,1,1,3)   9/36         9      nl_0_nl                    |                     dense()[2]
+     nl_1_nl (Nonlinearity)             (1,1,1,3)                3      dense_1                    |                     nl()/o[3] 
+------------------------------------------------------------------------------------------------------------------------------------
+model/c-model: macc=22/22  weights=68/68  activations=--/20 io=--/24
+
+
+
+Generated C-graph summary
+------------------------------------------------------------------------------------------------------------------------
+model name            : my_model
+c-name                : network
+c-node #              : 4
+c-array #             : 9
+activations size      : 20 (1 segments)
+weights size          : 68 (1 segments)
+macc                  : 22
+inputs                : ['serving_default_input_60_output']
+outputs               : ['nl_1_nl_output']
+
+C-Arrays (9)
+-------------------------------------------------------------------------------------------------------------
+c_id   name (*_array)                    item/size   domain/mem-pool           c-type        fmt     comment
+-------------------------------------------------------------------------------------------------------------
+0      serving_default_input_60_output   3/12        user/                     float         float   /input 
+1      dense_0_output                    2/8         activations/**default**   float         float          
+2      nl_0_nl_output                    2/8         activations/**default**   float         float          
+3      dense_1_output                    3/12        activations/**default**   float         float          
+4      nl_1_nl_output                    3/12        user/                     float         float   /output
+5      dense_0_weights                   6/24        weights/                  const float   float          
+6      dense_0_bias                      2/8         weights/                  const float   float          
+7      dense_1_weights                   6/24        weights/                  const float   float          
+8      dense_1_bias                      3/12        weights/                  const float   float          
+-------------------------------------------------------------------------------------------------------------
+
+C-Layers (4)
+-------------------------------------------------------------------------------------------------------------
+c_id   name (*_layer)   id   layer_type   macc   rom   tensors                              shape (array id)
+-------------------------------------------------------------------------------------------------------------
+0      dense_0          0    dense        8      32    I: serving_default_input_60_output   (1,1,1,3) (0)   
+                                                       W: dense_0_weights                   (3,1,1,2) (5)   
+                                                       W: dense_0_bias                      (1,1,1,2) (6)   
+                                                       O: dense_0_output                    (1,1,1,2) (1)   
+-------------------------------------------------------------------------------------------------------------
+1      nl_0_nl          0    nl           2      0     I: dense_0_output                    (1,1,1,2) (1)   
+                                                       O: nl_0_nl_output                    (1,1,1,2) (2)   
+-------------------------------------------------------------------------------------------------------------
+2      dense_1          1    dense        9      36    I: nl_0_nl_output                    (1,1,1,2) (2)   
+                                                       W: dense_1_weights                   (2,1,1,3) (7)   
+                                                       W: dense_1_bias                      (1,1,1,3) (8)   
+                                                       O: dense_1_output                    (1,1,1,3) (3)   
+-------------------------------------------------------------------------------------------------------------
+3      nl_1_nl          1    nl           3      0     I: dense_1_output                    (1,1,1,3) (3)   
+                                                       O: nl_1_nl_output                    (1,1,1,3) (4)   
+-------------------------------------------------------------------------------------------------------------
+
+
+
+Complexity report per layer - macc=22 weights=68 act=20 ram_io=24
+------------------------------------------------------------------------
+id   name      c_macc                    c_rom                     c_id
+------------------------------------------------------------------------
+0    dense_0   ||||||||||||||    36.4%   ||||||||||||||    47.1%   [0] 
+0    nl_0_nl   ||||               9.1%   |                  0.0%   [1] 
+1    dense_1   ||||||||||||||||  40.9%   ||||||||||||||||  52.9%   [2] 
+1    nl_1_nl   ||||||            13.6%   |                  0.0%   [3] 
+
+Generated files (5)
+---------------------------------------------------------------------
+C:\Users\fede-\.stm32cubemx\network_output\network_config.h
+C:\Users\fede-\.stm32cubemx\network_output\network.h
+C:\Users\fede-\.stm32cubemx\network_output\network.c
+C:\Users\fede-\.stm32cubemx\network_output\network_data.h
+C:\Users\fede-\.stm32cubemx\network_output\network_data.c

@@ -1,0 +1,239 @@
+{
+    "_allocate_inputs": 4,
+    "_allocate_outputs": 4,
+    "cli_parameters": "generate --name network -m C:/Archivio/Lavoro/MBDA/Hums/Stm32 anomaly detection/autoencoder_lstm/models/LSTM_model.h5 --type keras --compression none --verbosity 1 --workspace C:\\Users\\fede-\\AppData\\Local\\Temp\\mxAI_workspace849027265751004408518716002965892 --output C:\\Users\\fede-\\.stm32cubemx\\network_output --allocate-inputs --series stm32l4 --allocate-outputs",
+    "cli_version": {
+        "major": 1,
+        "micro": 0,
+        "minor": 7
+    },
+    "cli_version_str": "1.7.0",
+    "compression": {
+        "factor": null,
+        "layers": {}
+    },
+    "date_time": "Thu Mar 23 21:42:02 2023",
+    "error": 0,
+    "error_str": [],
+    "exec_cmd": "generate",
+    "exec_duration": 0.0,
+    "hash": "7541539eb86bec7c44baf75ce9d67ad9",
+    "inputs": [
+        "input_0"
+    ],
+    "layers": [
+        {
+            "c_id": [
+                0
+            ],
+            "extras": {
+                "n_macc": 0,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 384,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        32,
+                        1,
+                        3,
+                        1
+                    ]
+                },
+                "rom_size": 18816
+            },
+            "id": 0,
+            "inputs": [],
+            "name": "input_0",
+            "original": null,
+            "type": "Input"
+        },
+        {
+            "c_id": [],
+            "extras": {
+                "n_macc": 148480,
+                "n_params": 4608,
+                "psize": 18432,
+                "rom_size": 0
+            },
+            "id": 0,
+            "inputs": [
+                "input_0"
+            ],
+            "name": "lstm_4",
+            "original": "LSTM",
+            "type": "LSTM"
+        },
+        {
+            "c_id": [
+                1
+            ],
+            "extras": {
+                "n_macc": 100864,
+                "n_params": 3136,
+                "psize": 12544,
+                "rom_size": 12736
+            },
+            "id": 1,
+            "inputs": [
+                "lstm_4"
+            ],
+            "name": "lstm_5",
+            "original": "LSTM",
+            "type": "LSTM"
+        },
+        {
+            "c_id": [
+                2
+            ],
+            "extras": {
+                "n_macc": 0,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 2048,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        32,
+                        1,
+                        16,
+                        1
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 2,
+            "inputs": [
+                "lstm_5"
+            ],
+            "name": "repeat_vector_1",
+            "original": "RepeatVector",
+            "type": "Tile"
+        },
+        {
+            "c_id": [
+                3
+            ],
+            "extras": {
+                "n_macc": 68096,
+                "n_params": 2112,
+                "psize": 8448,
+                "rom_size": 8640
+            },
+            "id": 3,
+            "inputs": [
+                "repeat_vector_1"
+            ],
+            "name": "lstm_6",
+            "original": "LSTM",
+            "type": "LSTM"
+        },
+        {
+            "c_id": [
+                4
+            ],
+            "extras": {
+                "n_macc": 201728,
+                "n_params": 6272,
+                "psize": 25088,
+                "rom_size": 25472
+            },
+            "id": 4,
+            "inputs": [
+                "lstm_6"
+            ],
+            "name": "lstm_7",
+            "original": "LSTM",
+            "type": "LSTM"
+        },
+        {
+            "c_id": [
+                5,
+                6
+            ],
+            "extras": {
+                "n_macc": 3168,
+                "n_params": 99,
+                "psize": 396,
+                "rom_output": {
+                    "c_size": 384,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        32,
+                        1,
+                        1,
+                        3,
+                        1
+                    ]
+                },
+                "rom_size": 396
+            },
+            "id": 5,
+            "inputs": [
+                "lstm_7"
+            ],
+            "name": "time_distributed_1",
+            "original": "TimeDistributed",
+            "type": "TimeDistributed"
+        }
+    ],
+    "model_files": [
+        "C:\\Archivio\\Lavoro\\MBDA\\Hums\\Stm32 anomaly detection\\autoencoder_lstm\\models\\LSTM_model.h5"
+    ],
+    "model_n_params": 16227,
+    "model_name": "LSTM_model",
+    "model_size": 64908,
+    "model_type": "keras",
+    "name": "network",
+    "outputs": [
+        "time_distributed_1"
+    ],
+    "ram_io_size": [
+        384,
+        384
+    ],
+    "ram_size": [
+        7040,
+        7040
+    ],
+    "report_version": 1.1,
+    "rom_cfact": 1.0,
+    "rom_heap_inspector": 2048,
+    "rom_inputs": [
+        {
+            "c_size": 384,
+            "c_type": "float",
+            "name": "input_0"
+        }
+    ],
+    "rom_n_macc": 522336,
+    "rom_outputs": [
+        {
+            "c_size": 384,
+            "c_type": "float",
+            "name": "time_distributed_1"
+        }
+    ],
+    "rom_size": 65484,
+    "strategy": "heap_overlay",
+    "tools_api_version": {
+        "major": 1,
+        "micro": 0,
+        "minor": 7
+    },
+    "tools_version": {
+        "extra": "19389",
+        "major": 8,
+        "micro": 0,
+        "minor": 0
+    },
+    "val_error": -1.0,
+    "val_error_desc": "None (None) #-1",
+    "val_metrics": []
+}
