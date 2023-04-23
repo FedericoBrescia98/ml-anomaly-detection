@@ -1,0 +1,388 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Packages & page setup
+\usepackage{url}
+\usepackage{wrapfig}
+\usepackage{tocbibind}
+% Use the "Natbib" style for the references in the Bibliography
+\usepackage{verbatim}
+\usepackage{multirow}
+%\usepackage{cite}
+\usepackage{booktabs}
+\usepackage{epstopdf}
+\usepackage{setspace}
+\singlespacing % interlinea singola
+\linespread{1}
+\usepackage{color}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt}
+
+\author{Federico Brescia}
+\date{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Page setup
+
+\fancyhf{}
+\rhead{2021/2022}
+\lhead{Federico Brescia s4511157}
+\rfoot{Page \thepage}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language italian
+\language_package default
+\inputencoding auto
+\fontencoding T1
+\font_roman "default" "default"
+\font_sans "helvet" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family sfdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks false
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref section
+\pdf_pdfusetitle false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 2
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine natbib
+\cite_engine_type numerical
+\biblio_style unsrt
+\biblio_options square,comma,sort&compress
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 4
+\tocdepth 4
+\paragraph_separation skip
+\defskip medskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style plain
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Pagina del titolo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace 3cm*
+\end_inset
+
+ 
+\series bold
+\size giant
+Relazione esame
+\series default
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset VSpace 1.5cm
+\end_inset
+
+ 
+\begin_inset VSpace 1.5cm
+\end_inset
+
+ 
+\series bold
+\size larger
+Federico Brescia s4511157
+\series default
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% <-- author
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset VSpace vfill
+\end_inset
+
+Edge Computing
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% <-- course
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset VSpace 1cm
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename Figures/logoUnige.png
+	width 40text%
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{arabic}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduzione
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "introduzione"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+deo, che richiedono grandi quantità di larghezza di banda.
+\end_layout
+
+\begin_layout Standard
+Nel frattempo, la maggior parte dei sensori IoT raramente neces
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conclusioni
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "conclusioni"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Commenti e conclusioni finali.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Riferimenti bibliografici
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+bibsection}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "riferimenti"
+
+\end_inset
+
+ 
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintAll"
+bibfiles "biblio"
+options "unsrtnat"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

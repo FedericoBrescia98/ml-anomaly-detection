@@ -1,0 +1,103 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Packages & page setup
+\documentclass[a4paper, 10pt, oneside]{article}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{wrapfig}
+\usepackage{tocbibind}
+\usepackage[square, numbers, comma, sort&compress]{natbib}  % Use the "Natbib" style for the references in the Bibliography
+\usepackage{verbatim} 
+\usepackage[italian, english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{cite}
+\usepackage{booktabs}
+\usepackage{epstopdf}
+\usepackage{helvet} 
+\usepackage{setspace}
+\singlespacing % interlinea singola
+\linespread{1}
+\usepackage{color}
+\usepackage[margin=2.5cm]{geometry}
+\setlength{\parindent}{0pt}
+\usepackage{fancyhdr}
+
+\usepackage{float}
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+\usepackage[T1]{fontenc}
+\usepackage{subcaption}
+\usepackage{esint}
+
+\author{Federico Brescia}
+\date{\today}
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pagina del titolo
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{3cm}
+        \Huge
+        \textbf{Relazione esame} \\
+        \vspace{1.5cm}
+        \vspace{1.5cm}
+        \Large
+        \textbf{Federico Brescia s4511157}                      % <-- author
+        \vfill
+        Edge Computing\\                % <-- course
+        \vspace{1cm}
+        \includegraphics[width=0.4\textwidth]{Figures/logoUnige.png} \\
+    \end{center}
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\section*{Sommario}
+\label{sommario}
+\renewcommand{\refname}{}
+Obiettivi e parti del lavoro (2 pagine)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\tableofcontents
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagenumbering{arabic}
+\newpage
+\section{Introduzione}
+\label{introduzione}
+\renewcommand{\refname}{}
+%%%%%%%%%%%%%%%%circa una ventina di pagine di introduzione con spiegazione degli obiettivi e utilizzi di ogni sezione?%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\section{Conclusioni}
+\label{conclusioni}
+\renewcommand{\refname}{}
+
+Commenti e conclusioni finali.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\section{Riferimenti bibliografici}
+\label{riferimenti}
+\renewcommand{\refname}{}
+\bibliography{biblio} 
+\bibliographystyle{unsrtnat}
+
+\end{document}
