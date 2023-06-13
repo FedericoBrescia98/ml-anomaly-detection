@@ -1,5 +1,7 @@
 # Stm32Cube Debug
 Debug/
+.ai
+.settings
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -786,6 +786,14 @@ Rilevamento di anomalie basato su clustering: questo metodo raggruppa i
  punti dati in base alla loro somiglianza e considera come anomalie quelli
  che appartengono a cluster piccoli o isolati.
  
+\begin_inset CommandInset citation
+LatexCommand citep
+key "gornitz2017support"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -822,6 +830,13 @@ Tuttavia, gli algoritmi basati su questo approccio esaminano i dati delle
  Tuttavia, il principale svantaggio del modello kernel Fisher è che richiede
  l’inversione della matrice delle informazioni Fisher, che ha una complessità
  computazionale elevata.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "zhao2015classifying"
+literal "false"
+
+\end_inset
+
  D’altra parte, per ottenere una prestazione adeguata da un modello generativo
  come un modello nascosto di Markov (HMM), si dovrebbero selezionare attentament
 e i suoi parametri strutturali, ad esempio il numero di stati e la topologia
@@ -832,6 +847,15 @@ e i suoi parametri strutturali, ad esempio il numero di stati e la topologia
  Pertanto, sono stati introdotti le reti neurali, in particolare gli approcci
  basati su reti neurali ricorrenti (RNN), grazie alla loro struttura di
  memoria intrinseca che può memorizzare informazioni “temporali” o “di stato”.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "darban2022deep"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -897,6 +921,23 @@ e, ovvero un’anomalia è un evento che non può essere previsto dai dati nomin
  Inoltre, sia gli approcci comuni che quelli basati su reti neurali possono
  elaborare solo sequenze di vettori a lunghezza fissa, il che limita significati
 vamente il loro utilizzo nelle applicazioni reali.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "siciliano2021deep"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "zhang2022time"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
